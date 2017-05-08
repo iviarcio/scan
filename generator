@@ -61,7 +61,7 @@ __kernel void scan (__global _dataType_ *input,
 			int ai = offset * (2 * tid + 1) - 1;
 			int bi = offset * (2 * tid + 2) - 1;
 
-			int t = block[ai];
+			_dataType_ t = block[ai];
 			block[ai] = block[bi];
 			block[bi] = block[bi] _operation_ t;
 		}
